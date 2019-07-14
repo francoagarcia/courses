@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import WeatherLocation from './components/WeatherLocation';
 import './App.css';
+import LocationList from './components/LocationList';
 
-class App extends Component {
-  render() {
+const cities = [
+  "Santiago del Estero,ar",
+  "San Francisco,us",
+  "Bogota,col",
+];
+
+class App extends Component { //Class component
+  render() { //es lo que permite dibujar este componente
     return (
       <div className="App">
-        <WeatherLocation />
+        <LocationList cities={cities}></LocationList>
       </div>
     );
   }
